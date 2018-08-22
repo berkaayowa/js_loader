@@ -75,3 +75,7 @@ $('#loader').loader('show');
 ```html
 $('#loader').loader('hide');
 ```
+#### Demo 
+Source code for this demo is under example/index2.html
+![](example/images/demo1.gif)
+

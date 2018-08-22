@@ -14,10 +14,13 @@
             padding: 5px;
             display: inline-block;
         }
-        a:hover {
+        a:hover,.cancel:hover, .stop:hover  {
             cursor: pointer;
         }
-        
+
+        .cancel {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body style="text-align:center;">
@@ -41,7 +44,13 @@
     });
 
     $('#link').on('click', function() {
+
+        $('#loader').loader('setHtmlMessage', 'Please waite <span class="cancel">cancel</span>');
         $('#loader').loader('show');
+
+        $('.cancel').on('click', function() {
+            $('#loader').loader('hide');
+        });
     })
 
 </script>
