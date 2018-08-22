@@ -8,6 +8,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../loader.js"></script>
     <style>
+        a {
+            cursor: pointer;
+            border: 1px solid red;
+            padding: 5px;
+            display: inline-block;
+        }
         a:hover {
             cursor: pointer;
         }
@@ -21,10 +27,16 @@
 </body>
 </html>
 <script>
-     $('#loader').loader({
+    $('#loader').loader({
         gifUrl: "./images/loader.gif",
         bgRgab:'rgba(53, 53, 53, 0.8)',
-        color:'white'
+        color:'white',
+        onStartLoading: function() {
+            console.log("started loading");
+        },
+        onFinishLoading: function() {
+            console.log("Finished loading");
+        }
     });
 
     $('#link').on('click', function() {

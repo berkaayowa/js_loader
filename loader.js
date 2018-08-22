@@ -6,7 +6,9 @@
             message: "Loading ...",
             gifUrl: null,
             bgRgab: 'rgba(0, 0, 0, 0.8)',
-            color:'white'
+            color:'white',
+            onStartLoading: null,
+            onFinishLoading: null
         };
 
         this.option = $.extend({}, defaults, option);
@@ -22,14 +24,26 @@
             loaderWrapper.css('display','block');
             loaderWrapper.appendTo('body');
             $('body').css('overflow', 'hidden');
+
+            if(jQuery.isFunction(this.option.onStartLoading)){
+                this.option.onStartLoading();
+            }
         },
         hide: function() {
             loaderWrapper.css('display','c');
             $('body').css('overflow', '');
             loaderWrapper.remove();
+
+            if(jQuery.isFunction(this.option.onFinishLoading)){
+                this.option.onFinishLoading();
+            }
+            
         },
         setMessage: function(value) {
             messageWrapper.text(value);
+        },
+        setHtmlMessage: function(value) {
+            messageWrapper.html(value);
         },
         init: function () {
 
