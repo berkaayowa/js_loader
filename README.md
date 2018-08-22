@@ -1,5 +1,5 @@
 # JS Loader
-### JS Loader is a lightweight jQuery plugin that helps you create an animated spinner with a fullscreen loading mask 
+### JS Loader is a lightweight jQuery plugin written by Berka Ayowa that helps you create an animated spinner with a fullscreen loading mask 
 To use it you just have to include jQuery and a copy of JS Loader plugin in your head or footer:
 
 ```html
