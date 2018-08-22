@@ -9,7 +9,7 @@ To use it you just have to include jQuery and a copy of JS Loader plugin in your
 
 #### Properies
 | Attribute | Description | Example | Default Value |
-| --- | --- |
+| --- | --- | --- | --- |
 | gifUrl | Url for a spinner gif image.| "./images/loader.gif" | NULL |
 | bgRgab | Background color in Rgab format.| 'rgba(53, 53, 53, 0.8)' | 'rgba(53, 53, 53, 0.8)' |
 | color | Loading Text color.| '#eaeaea' | 'White' |
@@ -17,24 +17,24 @@ To use it you just have to include jQuery and a copy of JS Loader plugin in your
 
 #### Events
 | Event | Description |
-| --- | --- | --- |
+| --- | --- |
 | onStartLoading | Fires when loading starts |
 | onFinishLoading | Fires when loading starts |
 
 #### Methds
 | Methd | Description |
-| --- | --- | --- |
+| --- | --- |
 | show | To start showing loader |
 | hide | To stop showing loader |
 | setMessage | To set loading text |
 | setHtmlMessage | To set loading text as html element
 
-##### Basic Initialize
+#### Basic Initialize
 
 ```html
 $('#loader').loader();
 ```
-##### Initialize with options
+#### Initialize with options
 
 ```html
 $('#loader').loader({
@@ -44,7 +44,7 @@ $('#loader').loader({
 });
 ```
 
-##### Initialize with options and events
+#### Initialize with options and events
 
 ```html
 $('#loader').loader({
@@ -60,18 +60,18 @@ $('#loader').loader({
 });
 ```
 
-##### Method calls
+#### Method calls
 ```html
 $('#loader').loader('setMessage', 'Please waite');
 $('#loader').loader('setHtmlMessage', '<h1>Waiting..</h1>');
 ```
 
-##### Show/Start loading (Method)
+#### Show/Start loading (Method)
 ```html
 $('#loader').loader('show');
 ```
 
-##### Hide/StarStopt loading (Method)
+#### Hide/Stopt loading (Method)
 ```html
 $('#loader').loader('hide');
 ```
